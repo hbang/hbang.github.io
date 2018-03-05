@@ -1,4 +1,4 @@
-The HTML of the pages here (including assets contained in the repository) are licensed under the Apache License, version 2.0. Resources from outside of this repository are subject to their own licenses.
+The HTML of the pages here (including assets contained in the repository, but not the HASHBANG logo) are licensed under the Apache License, version 2.0. Resources from outside of this repository are subject to their own licenses.
 
 ---
 
