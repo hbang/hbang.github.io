@@ -25,7 +25,7 @@
 	}
 
 	body {
-		font-family: system-ui, -apple-system-font, sans-serif;
+		font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 		background: #eee;
 		color: #111;
 	}
@@ -63,20 +63,21 @@
 		color: #555;
 	}
 
-	#opensource-items {
+	.opensource-items {
 		display: table;
 		width: 100%;
 		list-style: none;
 		padding: 0;
+		margin: 0 -.5rem;
 	}
 
-	#opensource-items li {
+	.opensource-items li {
 		display: table-cell;
-		width: 33.3333%;
-		padding: .25em;
+		width: 50%;
+		padding: .5rem;
 	}
 
-	#opensource-items li div {
+	.opensource-items li div {
 		display: block;
 		width: 100%;
 		padding: 1em;
@@ -87,32 +88,28 @@
 		position: relative;
 	}
 
-	#opensource-items li div p {
+	.opensource-items li div p {
 		font-size: .95em;
 		line-height: 1.5em;
 	}
 
-	#opensource-items li div a {
+	.opensource-items li div a {
 		font-weight: bold;
 		display: block;
 	}
 
-	#opensource-items li div .docs {
+	.opensource-items li div .docs {
 		font-size: 1.5em;
 		margin: 0;
 	}
 
-	#opensource-items li div .source {
+	.opensource-items li div .source {
 		font-size: .9em;
 		margin: .2em 0 0 0;
 	}
 
 	@media (max-width: 724px) {
-		#opensource-items {
-			display: block;
-		}
-
-		#opensource-items li {
+		.opensource-items, .opensource-items li {
 			display: block;
 			width: auto;
 		}
@@ -131,7 +128,7 @@
 		<header id="banner" role="banner">
 			<div class="container">
 				<h1>
-					<a href="https://hbang.ws/">
+					<a href="https://hashbang.productions/">
 						<svg viewBox="0 0 700 128">
 							<title>HASHBANG Productions</title>
 							<path d="M116.836 97h-11.023l36.19-97.086h11.025L116.836 97zm-22.453 1.926c-2.302 0-4.206-.697-5.71-2.092-1.507-1.395-2.26-3.686-2.26-6.873 0-6.02 2.657-9.03 7.97-9.03 2.567 0 4.55.78 5.943 2.33 1.395 1.55 2.092 3.79 2.092 6.71 0 2.84-.71 5.04-2.125 6.61-1.417 1.57-3.387 2.36-5.91 2.36zm-3.387-28.688L87.61-.086h13.746L97.97 70.238h-6.974zm-33.61-10.36H76.18v8.567H55.793L50.215 97h-9.098l5.578-28.555h-20.12L21.128 97h-9.032l5.312-28.555H.012V59.88H19.07l4.516-22.58H5.19v-8.433h19.857L30.492-.086h9.23l-5.445 28.953H54.53L60.11-.086h8.898L63.43 28.867h17.53V37.3H61.77l-4.383 22.58zM32.552 37.302L28.17 59.88h20.12l4.384-22.58h-20.12z" fill-rule="evenodd" fill="#656565"/>
@@ -147,11 +144,11 @@
 				<article>
 					<h2>Open Source</h2>
 
-					<ul id="opensource-items">
+					<ul class="opensource-items">
 						<li>
 							<div>
 								<h3>Cephei</h3>
-								<p>Cephei is a framework for jailbroken iOS devices that includes various convenience features for developers. Primarily, it focuses on settings-related features, but it also contains other utilties. I hope you’ll appreciate what it has to offer.</p>
+								<p>Cephei is a framework for jailbroken iOS devices that includes various convenience features for developers. Primarily, it focuses on settings-related features, but it also contains other utilties.</p>
 
 								<p class="docs"><a href="/libcephei/">Docs &rarr;</a></p>
 								<p class="source"><a href="https://github.com/hbang/libcephei" class="source">Source Code</a></p>
@@ -160,8 +157,20 @@
 
 						<li>
 							<div>
+								<h3>Alderis</h3>
+								<p>Alderis is a fresh new color picker, with a gentle, fun, and dead simple user interface. It aims to incorporate the usual elements of a color picker, in a way that users will find easy and fun to use.</p>
+
+								<p class="docs"><a href="/Alderis/">Docs &rarr;</a></p>
+								<p class="source"><a href="https://github.com/hbang/Alderis" class="source">Source Code</a></p>
+							</div>
+						</li>
+					</ul>
+
+					<ul class="opensource-items">
+						<li>
+							<div>
 								<h3>Opener</h3>
-								<p>Opener is a developer framework for overriding link destinations. Handler packages instruct Opener whether to change a URL that’s about to be opened, or is being interacted with by the user. For example, Maps links could be redirected to the Google Maps app.</p>
+								<p>Opener is a framework for overriding link destinations. Handler packages instruct Opener whether to change a URL that’s about to be opened. For example, Maps links could be redirected to the Google Maps app.</p>
 
 								<p class="docs"><a href="/libopener/">Docs &rarr;</a></p>
 								<p class="source"><a href="https://github.com/hbang/libopener" class="source">Source Code</a></p>
@@ -171,7 +180,7 @@
 						<li>
 							<div>
 								<h3>TypeStatus</h3>
-								<p>TypeStatus includes a framework for developers to create their own providers – plugins that listen for and display notifications through TypeStatus’ subtle notification interface.<br><br><br></p>
+								<p>TypeStatus includes a framework for developers to create their own providers – plugins that listen for and display notifications through TypeStatus’ subtle notification interface.<br><br></p>
 
 								<p class="docs"><a href="/TypeStatus/">Docs &rarr;</a></p>
 								<p class="source"><a href="https://github.com/hbang/TypeStatus" class="source">Source Code</a></p>
@@ -186,7 +195,7 @@
 
 		<footer>
 			<div class="container">
-				<p role="footer">Copyright © 2018, HASHBANG Productions.</p>
+				<p role="footer">Copyright © 2020, HASHBANG Productions.</p>
 			</div>
 		</footer>
 	</div>
